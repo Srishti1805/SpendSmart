@@ -1,0 +1,10 @@
+mkdir full_stack
+cd full_stack
+npm init -y
+npm install express mongoose body-parser @types/express @types/mongoose typescript ts-node nodemon --save
+touch tsconfig.json
+mkdir controllers models routes interfaces
+cd interfaces
+
+tsc -> This will generate .js files
+npm install dotenv
