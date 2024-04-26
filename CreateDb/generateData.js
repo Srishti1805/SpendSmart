@@ -66,3 +66,36 @@ categoryCollection.insert(
     description: 'description 5'
 }
 )
+
+
+
+// Create a collection for budget
+db.createCollection('budget')
+// budget collection
+budgetCollection = db.getCollection("budget")
+// remove existing data
+budgetCollection.remove({})
+
+// create new data for budget for expense
+budgetCollection.insert(
+{
+    userId : "user1",
+    categoryId: "category 1",
+    type : "EXPENSE",
+    amount : "1000",
+    date : Date().now(),
+    note : "rent";
+}
+)
+
+// create new data for budget for income
+budgetCollection.insert(
+{
+    userId : "user1",
+    categoryId: "category 2",
+    type : "INCOME",
+    amount : "2000",
+    date : Date().now(),
+    note : "Freelancing";
+}
+)
